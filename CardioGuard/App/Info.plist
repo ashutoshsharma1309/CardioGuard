@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Info.plist (iOS target)
+
+  Declares the privacy usage descriptions and background modes required by
+  CardioGuard. HealthKit, Location, and Notification usage strings are MANDATORY
+  for App Store review; omitting them crashes the app on first permission prompt.
+-->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+    <key>CFBundleDisplayName</key>
+    <string>CardioGuard</string>
+
+    <key>NSHealthShareUsageDescription</key>
+    <string>CardioGuard reads your heart rate and blood oxygen to detect potential cardiac emergencies.</string>
+
+    <key>NSHealthUpdateUsageDescription</key>
+    <string>CardioGuard does not write health data; this is declared for completeness.</string>
+
+    <key>NSLocationWhenInUseUsageDescription</key>
+    <string>Your location is shared with emergency services only when an emergency is detected.</string>
+
+    <key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+    <string>Background location lets CardioGuard report your position if an emergency occurs while the app is not open.</string>
+
+    <key>UIBackgroundModes</key>
+    <array>
+        <string>processing</string>
+        <string>location</string>
+        <string>remote-notification</string>
+    </array>
+
+    <key>UIApplicationSceneManifest</key>
+    <dict>
+        <key>UIApplicationSupportsMultipleScenes</key>
+        <false/>
+    </dict>
+</dict>
+</plist>
